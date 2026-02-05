@@ -9,12 +9,6 @@ function Laptop(){
                     <h1>Julian Sedano <span style={{color:"#4f8cff"}}>{decoration}</span></h1>
                     <p>Full Stack Web Dev <span className="cursor">|</span></p>
 
-                    <div className="navigation row">
-                        <a className="btn btn-primary col-md-2" href="#">About Me</a>
-                        <a className="btn btn-primary col-md-2" href="#">Skills</a>
-                        <a className="btn btn-primary col-md-2" href="#">Projects</a>
-                        <a className="btn btn-primary col-md-2" href="#">Contact</a>
-                    </div>
                     
                     
                 </div>

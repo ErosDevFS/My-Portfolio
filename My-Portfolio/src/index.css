@@ -1,16 +1,101 @@
 :root {
-    --black-soft-3: #131417;
-    --black-soft-4: #16181b;
-
     --white-main: #f5f7fa;
     --gray-soft: #8b93a7;
 
     --accent: #4f8cff;
 }
 
+
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+    margin: 0;
     background: radial-gradient(circle at top, rgba(120, 80, 255, 0.08), transparent 60%), linear-gradient(180deg, #05070d, #0a0f1f);
     color: var(--white-main);
+}
+
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+   background: rgba(10, 10, 20, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+
+.navbar .nav-link {
+  color: var(--white-main);
+}
+
+.navbar .nav-link:hover {
+  color: var(--gray-soft);
+}
+
+.navbar-brand{
+  color: var(--accent);
+}
+
+.navbar-brand::after {
+  display: none !important;
+}
+
+.navbar-brand:hover{
+  color: #18469a;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: rgba(255,255,255,.8);
+}
+
+.navbar-nav > .nav-item > .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width .3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link.active {
+  --bs-navbar-active-color: var(--gray-soft);
+}
+
+.nav-brand.active{
+  --bs-navbar-active-color: var(--gray-soft);
+}
+
+
+.nav-brand::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width .3s ease;
+}
+
+.nav-brand:hover::after,
+.nav-brand.active::after {
+  width: 100%;
 }
 
 .laptop {
@@ -57,17 +142,6 @@ body {
     margin-bottom: 0.4rem;
     cursor: pointer;
 }
-
-.btn-primary{
-    margin: 5px;
-    background-color: var(--black-soft-3);
-    border: none;
-}
-
-.btn-primary:hover{
-    background-color: var(--black-soft-4);
-}
-
 
 
 .screen-content p {
@@ -218,6 +292,7 @@ body {
 
 
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -226,8 +301,8 @@ body {
 }
 
 .hero-content {
-  max-width: 1200px;
-  width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .hero::after {
@@ -240,6 +315,7 @@ body {
     rgba(0,0,0,0.8)
   );
   z-index: 1;
+  pointer-events: none;
 }
 
 
@@ -259,7 +335,7 @@ body {
 .about{
   background: radial-gradient(circle at top, rgba(120, 80, 255, 0.08), transparent 60%), linear-gradient(180deg, #05070d, #0a0f1f);
 
-  height: 1000px;
+  height: 103vh;
 }
 
 
@@ -286,9 +362,43 @@ body {
     font-size: 0.95rem;
     line-height: 1.7;
   }
-  .btn-primary{
-    margin: 1px;
-  }
 }
 
 
+.iphone {
+  width: 230px;
+  height: 420px;
+  background: #000;
+  border-radius: 40px;
+  padding: 8px;
+  box-shadow:
+    0 0 0 6px #111,
+    0 20px 40px rgba(0,0,0,.6);
+  position: relative;
+}
+
+.iphone-notch {
+  width: 100px;
+  height: 20px;
+  background: #000;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 20px 20px;
+  z-index: 2;
+}
+
+.iphone-screen {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.iphone-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

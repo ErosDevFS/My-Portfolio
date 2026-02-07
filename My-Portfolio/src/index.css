@@ -306,16 +306,16 @@ body {
 }
 
 .hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(0,0,0,0.3),
-    rgba(0,0,0,0.8)
-  );
-  z-index: 1;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at center,
+      rgba(0,0,0,0.3),
+      rgba(0,0,0,0.8)
+    );
+    z-index: 1;
+    pointer-events: none;
 }
 
 
@@ -416,6 +416,11 @@ body {
   overflow: hidden;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   margin-right: 3rem;
+  transition: transform 0.5s ease
+}
+
+.browser-card:hover{
+  transform: scale(1.08);
 }
 
 .browser-header {
@@ -462,4 +467,12 @@ body {
   font-size: 0.95rem;
   line-height: 1.5;
   color: #555;
+}
+
+.iconZoom{
+  transition: transform 0.5s ease
+}
+
+.iconZoom:hover{
+  transform: scale(1.15);
 }

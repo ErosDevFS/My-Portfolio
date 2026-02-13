@@ -407,7 +407,8 @@ body {
 
 .browser-card {
   width: 100%;
-  max-width: 380px;
+  max-width: 350px;
+  height: 360px;
   background: #ffffff;
   border-radius: 14px;
   box-shadow: 
@@ -453,7 +454,7 @@ body {
 }
 
 .browser-content {
-  padding: 28px;
+  padding: 10px;
 }
 
 .browser-content h3 {
@@ -465,7 +466,7 @@ body {
 
 .browser-content p {
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1;
   color: #555;
 }
 
@@ -475,4 +476,45 @@ body {
 
 .iconZoom:hover{
   transform: scale(1.15);
+}
+
+.skills{
+  background: radial-gradient(circle at top, rgba(120, 80, 255, 0.08), transparent 60%), linear-gradient(180deg, #05070d, #0a0f1f);
+
+  height: 150vh;
+}
+
+
+.skills-body{
+  background:
+    radial-gradient(
+      800px circle at 50% -20%,
+      rgba(124, 58, 237, 0.12),
+      transparent 45%
+    ),
+    linear-gradient(180deg, #05070d, #0a0f1f);
+}
+
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 4rem 1.5rem;
+    height: 455vh;
+  }
+
+  .skills h1 {
+    text-align: center;
+  }
+
+  .skills .browser-card {
+    height: 600px;
+  }
+  
+  .skills.iconZoom{
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .margin-mobile{
+    margin-top: 5em;
+  }
 }

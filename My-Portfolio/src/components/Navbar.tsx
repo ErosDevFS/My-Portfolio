@@ -23,7 +23,7 @@ function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="collapse navbar-collapse justify-content-center" id="navbarText">
+                <div className="collapse navbar-collapse justify-content-end" id="navbarText">
                     <ul className="navbar-nav gap-5">
                         <li className="nav-item">
                             <a className={`nav-link ${activeLink === "about" ? "active" : ""}`} onClick={()=> setActiveLink("about")} href="#about">About Me</a>
